@@ -1,0 +1,24 @@
+{
+  "name": "api-atividade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Heitor Dobeis",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.14",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
