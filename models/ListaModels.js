@@ -12,7 +12,7 @@ const listaSchema = new Schema({
   },
   tarefas: [{
     type: Schema.Types.ObjectId,
-    ref: 'tarefa'
+    ref: 'Tarefa'
   }]
 }, {
     timestamps: {
