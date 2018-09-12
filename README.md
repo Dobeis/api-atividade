@@ -1,6 +1,5 @@
-# api-atividade
-
-# Set variable EMAIL and SENHA
+api-atividade
+Set variable EMAIL and SENHA
 Unix:
   export EMAIL='email@teste.com'
   export SENHA='teste123
