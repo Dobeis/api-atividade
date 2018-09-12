@@ -11,7 +11,7 @@ router.route('/')
   .delete((req, res) => ListaController.deleteAll(req, res))
 
 router.route('/:id')
-  .all(emailAuth)
+  .post((req, res) => ListaController.addTask(req, res))
   .get((req, res) => ListaController.getById(req, res))
   .delete((req, res) => ListaController.deleteById(req, res))
   .put((req, res) => ListaController.updateById(req, res))

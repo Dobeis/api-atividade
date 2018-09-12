@@ -22,7 +22,14 @@ const ListaController = {
     .catch(erro => res.status(400).json(erro)),
   updateById: (req, res) => ListaModel.update({ _id: req.params.id }, req.body)
     .then(sucesso => res.status(200).json({ message: 'Lista alterada com sucesso' }))
-    .catch(err => res.status(400).json(err))
+    .catch(err => res.status(400).json(err)),
+  addTask: (req, res) => ListaModel.update(
+    { _id: req.params.id },
+    { $push: { tarefas: req.body.tarefa } },
+    (err, sucesso) => {
+      (err) ? console.log(err) : res.send('Tarefa adicionada!')
+    }
+  )
 }
 
 module.exports = ListaController

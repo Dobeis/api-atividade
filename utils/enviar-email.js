@@ -16,6 +16,8 @@ module.exports = usuario => {
       subject: 'Validação de Email',
       html: `<p>Segue o link para validação de email: </p>
            <a href="http://localhost:3000/confirmacao/${usuario._id}">
+            http://localhost:3000/confirmacao/${usuario._id}
+           </a>
           `
     }
 
