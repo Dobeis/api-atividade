@@ -13,3 +13,4 @@ In Windows:
 In Windows PowerShell:
   env:EMAIL='email@teste.com'
   env:SENHA='teste123'
+---
