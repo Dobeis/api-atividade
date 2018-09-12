@@ -2,7 +2,7 @@ const ListaModel = require('./../models/ListaModels')
 
 const ListaController = {
   getAll: (req, res) => ListaModel.find()
-    .populate('tarefas')
+    .populate('tarefa')
     .exec()
     .then(listas => res.status(200).json(listas))
     .catch(err => res.status(400).json(err)),
@@ -10,7 +10,7 @@ const ListaController = {
     .then(() => res.status(200).json({ message: 'Todos as listas foram apagadas' }))
     .catch(err => res.status(400).json(err)),
   getById: (req, res) => ListaModel.findById(req.params.id)
-    .populate('tarefas')
+    .populate('tarefa')
     .exec()
     .then(lista => res.status(200).json(lista))
     .catch(err => res.status(400).json(err)),
@@ -27,7 +27,7 @@ const ListaController = {
     { _id: req.params.id },
     { $push: { tarefas: req.body.tarefa } },
     (err, sucesso) => {
-      (err) ? console.log(err) : res.send('Tarefa adicionada!')
+      (err) ? console.log(err) : res.status(200).json({ message: 'Tarefa adicionada!' })
     }
   )
 }
