@@ -1,12 +1,13 @@
 const nodemailer = require('nodemailer');
+const config = require('../config')
 
 module.exports = usuario => {
   return new Promise((resolve, reject) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.EMAIL,
-        pass: process.env.SENHA
+        user: config.EMAIL,
+        pass: config.SENHA
       }
     });
 
