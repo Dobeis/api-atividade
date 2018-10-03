@@ -1,21 +1,11 @@
 # API Atividade
 
-Set variable EMAIL and SENHA
- 
-### Unix:
-- export EMAIL='email@teste.com'
-- export SENHA='teste123
-
----
-
-### Windows:
-
-- set EMAIL='email@teste.com'
-- set SENHA='teste123'
-
----
-
-### Windows *PowerShell*:
-
-- env:EMAIL='email@teste.com'
-- env:SENHA='teste123'
+### Development
+1. Create a .env file, example:
+```
+EMAIL=email@teste.com
+SENHA=teste123
+MONGO_URI=your-mongo-uri
+```
+2. npm i
+3. npm run dev

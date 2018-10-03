@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
+const config = require('./config')
 
 //Routes
 const homeRoute = require('./routes/homeRoute')
@@ -13,7 +14,8 @@ const tarefasRoute = require('./routes/tarefasRoute')
 const listasRoute = require('./routes/listasRoute')
 
 const db = mongoose.connection
-mongoose.connect('mongodb://root:123mudar@ds251622.mlab.com:51622/api-atividade', { useNewUrlParser: true })
+
+mongoose.connect(config.MONGO_URI, { useNewUrlParser: true })
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
